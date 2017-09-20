@@ -1,0 +1,11 @@
+{
+  "name": "btc-brl",
+  "version": "0.1.0",
+  "main": "index.js",
+  "bin": {
+    "btcbrl": "index.js"
+  },
+  "dependencies": {
+    "axios": "^0.16.2"
+  }
+}
