@@ -1,9 +1,12 @@
 #!/usr/bin/env node
 
 const axios = require('axios')
+console.reset = () => process.stdout.write('\033c')
 
-console.reset = function () {
-  return process.stdout.write('\033c')
+main(getTotalFromArgs())
+
+function getTotalFromArgs() {
+  return parseFloat(process.argv.slice(2)[ 0 ] || '1')
 }
 
 async function main(total) {
@@ -65,7 +68,3 @@ async function main(total) {
 
   setTimeout(() => main(total), 30000)
 }
-
-const total = parseFloat(process.argv.slice(2)[ 0 ] || '1')
-
-main(total).then()
