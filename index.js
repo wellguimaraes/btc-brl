@@ -36,7 +36,7 @@ async function main(total) {
 
   const ordered = Object
     .keys(prices)
-    .filter(it => ![ 'total', 'LOC', 'ARN' ].includes(it))
+    .filter(it => ![ 'total', 'LOC' ].includes(it))
     .map(it => ({
       id: it,
       name: exchanges[ it ].name,
